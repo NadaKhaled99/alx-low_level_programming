@@ -2,7 +2,7 @@
 /**
  *main -> main function - entry point
  *the puts ->function used for writing string
- *Return ->Always 0 (Succes)
+ *return value of 'main ->Always 0 (Succes)used to indicate how the program exited
  */
 int main(void)
 {
