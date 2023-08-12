@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
  *main -> main function - entry point
- *the puts -->function used for writing string
- *return ->should be zero and always 0 (success)
+ *the puts ->function used for writing string
+ *Return ->Always 0.
  */
 int main(void)
 {
