@@ -4,7 +4,6 @@
 *@c:char to apply
 *Return: 0 Always
 */
-
 int _isupper(int c)
 {
 if (c >= 'A' && c <= 'Z')
