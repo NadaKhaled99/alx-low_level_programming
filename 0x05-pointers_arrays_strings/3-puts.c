@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-*@str:stringtoprint
+*@str:string to print
 *_puts-print string
 *Return:nothing
 */
