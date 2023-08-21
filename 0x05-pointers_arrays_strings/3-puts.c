@@ -1,14 +1,14 @@
 #include "main.h"
 /**
+*@s:stringtoprint  
 *_puts-print string
-*@s:stringtoprint
 *Return:nothing
 */
 void _puts(char *str)
 {
 for (; *str != '\0'; str++)
-{
-_putchar(*str);
-}
+ {
+   _putchar(*str);
+ }
 _putchar('\n');
 }
