@@ -23,12 +23,3 @@ J++;
 }
 return (dest);
 }
-int main(void)
-{
-char s1[100] = "Hello";
-char s2[] = "World!";
-char *ptr;
-ptr = _strcat(s1, s2);
-printf(ptr);
-return (0);
-}
