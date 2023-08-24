@@ -8,11 +8,14 @@
 */
 char *_strncat(char *dest, char *src, int n)
 {
-int idx = 0;
+int idx;
 int dtlenght = 0;
-while (dest[idx++])
+while (dest[dtlenght] != '\0')
 dtlenght++;
-for (idx = 0; src[idx] && idx < n; idx++)
+for (idx = 0; src[idx] != '\0' && idx < n; idx++)
+{
 dest[dtlenght++] = src[idx];
+}
+dest[dtlenght] = '\0';
 return (dest);
 }
