@@ -9,12 +9,9 @@
 char *_strncpy(char *dest, char *src, int n)
 {
 int idx = 0;
-int srclenght = 0;
-while (scr[idx++])
-srclenght++;
 for (idx = 0; scr[idx] && idx < n; idx++)
 dest[idx] = scr[idx];
-for (idx = srclenght; idx < n; idx++)
-dest[idx] = '\0';
+while (idx < n)
+dest[idx++] = '\0';
 return (dest);
 }
