@@ -1,0 +1,8 @@
+ii0-main.c:17:11: error: implicit declaration of function '_strcat' [-Werror,-Wimplicit-function-declaration]
+    ptr = _strcat(s1, s2);
+          ^
+0-main.c:17:9: error: incompatible integer to pointer conversion assigning to 'char *' from 'int' [-Werror,-Wint-conversion]
+    ptr = _strcat(s1, s2);
+          ^
+	  0-main.c:17:9: error: incompatible integer to pointer conversion assigning to 'char *' from 'int' [-Werror,-Wint-conversion]
+	      ptr = _strcat(s1, s2);
