@@ -13,7 +13,7 @@ if (st[0] >= 97 && st[0] <= 122)
 {
 st[0] = st[0] - 32;
 }
-if (st[stct] == ' ' || st[stct] || st[stct] == '\n' || st[stct] == '\t' || st[stct] == ';' || st[stct] == ',' || st[stct] == '.' || st[stct] == '!' || st[stct] == '?' || st[stct] == '"' || st[stct] == '(' || st[stct] == ')' || st[stct] == '{' || st[stct] == '}')
+if (st[stct] == ' ' || st[stct] == '\n' || st[stct] == '\t' || st[stct] == ';' || st[stct] == ',' || st[stct] == '.' || st[stct] == '!' || st[stct] == '?' || st[stct] == '"' || st[stct] == '(' || st[stct] == ')' || st[stct] == '{' || st[stct] == '}')
 {
 if (st[stct + 1] >= 97 && st[stct + 1] <= 122)
 {
