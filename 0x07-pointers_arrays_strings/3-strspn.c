@@ -22,7 +22,7 @@ input++;
 verify = 1;
 }
 }
-if (verify== '\0')
+if (verify == '\0')
 return (i);
 }
 return (i);
