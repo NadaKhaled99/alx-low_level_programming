@@ -1,4 +1,5 @@
 #include "main.h"
+#include "putchar.h"
 #include <stdio.h>
 /**
  * main - check the code
@@ -6,7 +7,6 @@
  * Return: Always 0.
  */
 void print_chessboard(char (*a)[8]);
-char _putchar();
 int main(void)
 {
     char board[8][8] = {
