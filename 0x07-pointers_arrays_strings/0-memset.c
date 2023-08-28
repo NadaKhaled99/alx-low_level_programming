@@ -1,8 +1,9 @@
 #include "main.h"
 /**
-*_memset:fills the 1st n byte of  memory pointed to by s with the byte b
+*_memset-entry point
 *@b:the address of memory to print
 *@s:the size of the memory to print
+*@n:n byte of  memory
 *Return: Always 0 (success)
  */
 char *_memset(char *s, char b, unsigned int n)
