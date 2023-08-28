@@ -1,9 +1,9 @@
 #include "main.h"
-#include <unistd.h>
+#include "putchar.h"
 /**
 *print_chessboard-prints the chessboard
 *@a:ptr to print
-Return:return void-Always 0 (success)
+Return:a return type of void.
 */
 void print_chessboard(char (*a)[8])
 {
