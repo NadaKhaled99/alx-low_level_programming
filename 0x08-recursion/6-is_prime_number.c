@@ -16,8 +16,8 @@ return (real_prime(n, 2));
 }
 /**
 *real_prime-function that calculate if number is prime
-*@n:number integer
-*@i:iterator
+*@a:number integer to know if prime or not
+*@b:number for checking
 *Return:1 if n is prime or 0 if not prime
 */
 int real_prime(int a, int b)
