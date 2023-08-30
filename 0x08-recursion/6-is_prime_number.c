@@ -1,6 +1,6 @@
 #include "main.h"
 #include "putchar.h"
-int real_prime(int n, int i);
+int real_prime(int a, int b);
 /**
 *is_prime_number-this integer is prime or not
 *@n:number
@@ -8,11 +8,11 @@ int real_prime(int n, int i);
 */
 int is_prime_number(int n)
 {
-if (n <= 1)
+if (n < 2)
 {
 return (0);
 }
-return (real_prime(n, n - 1));
+return (real_prime(n, 2));
 }
 /**
 *real_prime-function that calculate if number is prime
@@ -20,15 +20,15 @@ return (real_prime(n, n - 1));
 *@i:iterator
 *Return:1 if n is prime or 0 if not prime
 */
-int real_prime(int n, int i)
+int real_prime(int a, int b)
 {
-if (i == 1)
+if (a == b)
 {
 return (1);
 }
-if (n % i == 0 && i > 0)
+if (!(a % b))
 {
 return (0);
 }
-return (real_prime(n, n - 1));
+return (real_prime(a, b + 1));
 }

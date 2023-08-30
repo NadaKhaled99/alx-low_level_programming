@@ -7,6 +7,7 @@
  * Return: Always 0.
  */
 int is_prime_number(int n);
+int real_prime(int n, int i);
 int main(void)
 {
     int r;
