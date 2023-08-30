@@ -1,5 +1,6 @@
 #include "main.h"
 #include "putchar.h"
+int real_sqrt_recursion(int n, int i);
 /**
 *_sqrt_recursion- function returns the natural sqrt root of a number
 *@n: integer
@@ -7,29 +8,27 @@
 */
 int _sqrt_recursion(int n)
 {
- int start = 1;
- int end = n;
- int r = -1;
-if (n == 0 || n == 1)
+if (n < 0)
 {
-return (n);
+return (-1);
 }
-while (start <= end)
+return (real_sqrt_recursion(n, 0));
+}
+/**
+*real_sqrt_recursion-function to find natural
+*@n:number to calculate sqrt
+*@i:iterator
+*Return: result sqrt
+*/
+int real_sqrt_recursion(int n, int i)
 {
-int mid = (start +  end) / 2;
-if (mid * mid == n)
+if (i * i > n)
 {
-return (mid);
+return (-1);
 }
-if (mid * mid < n)
+if (i * i == n)
 {
-start = mid + 1;
-r = mid;
+return (i);
 }
-else
-{
-end = mid - 1;
-}
-}
-return (r);
+return (real_sqrt_recursion(n, i + 1));
 }
