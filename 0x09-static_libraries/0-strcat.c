@@ -1,9 +1,9 @@
 #include "main.h"
 /**
-*_strcat-function returns dest, the pointer to the destination string
-*@dest:This is a pointer to the destination array
-@src: the string to be appended-This should not overlap the dest
-Returns:dest
+*_strcat-function concatenates the two string
+*@dest: is a pointer to the dest
+*@src: source
+*Return:the pointer to dest
 */
 char *_strcat(char *dest, char *src)
 {

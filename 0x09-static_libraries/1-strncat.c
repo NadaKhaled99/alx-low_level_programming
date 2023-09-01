@@ -4,7 +4,7 @@
 *@dest:This is a pointer to the destination array
 *@src:the string to be appended-This should not overlap the dest
 *@n:number of bytes from src to be appended to dest
-*Returns:pointer to the resulting string dest
+*Return:pointer to dest
 */
 char *_strncat(char *dest, char *src, int n)
 {
