@@ -7,11 +7,11 @@
 */
 void free_trial(char **str, int counter)
 {
-for (int counter = 0;counter > 0;)
+for (counter = 0; counter > 0; )
 {
-free(str[--i]);
+free(str[--counter]);
 }
-free(string);
+free(str);
 }
 /**
 *getnum-fn to calculate number of letters or words
@@ -41,62 +41,48 @@ return (number);
 }
 /**
 *strtow-function that splits a string into words
-*@str:string/element
-Rerurn:NULL if str == NULL or str == ""
+*@str:string/element of array
+Rerurn:returns a pointer to an array of strings (words) or NULL
 */
 char **strtow(char *str)
 {
-int wrd = 0;
-int being = 0;
-int count = 0;
-int len = 0;
-char **w;
-char *find;
+int wrd = 0, being = 0, count = 0, len = 0;
+char **w, *find;
 if (str == 0 || *str == 0)
-{
 return (NULL);
-}
 wrd = getnum(str);
 if (wrd == 0)
 {
 return (NULL);
 }
-w = malloc((wrd +1) * sizeof(char *));
+w = malloc((wrd + 1) * sizeof(char *));
 if (w == 0)
-{
 return (NULL);
-}
 for (; *str != '\0' && being < wrd;)
 {
 if (*str == ' ')
-{
 str++;
-}
 else
 {
 find = str;
 for (; *str != ' ' && *str != '\0';)
 {
-len++;
-str++;
+len++, str++;
 }
 w[being] = malloc((len + 1) * sizeof(char));
 if (w[being] == 0)
 {
-free_trial(w, b);
+free_trial(w, being);
 return (NULL);
 }
 while (*find != ' ' && *find != '\0')
 {
 w[being][count] = *find;
-find++;
-count++;
+find++, count++;
 }
 w[being][count] = '\0';
-being++;
-count = 0;
-len = 0;
-str++;
+being++, str++;
+count = 0, len = 0;
 }
 }
 return (w);
