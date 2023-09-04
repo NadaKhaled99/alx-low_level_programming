@@ -17,12 +17,12 @@ while (str[i] != '\0')
 {
 i++;
 }
-n = malloc(size * sizeof(*str) + 1);
+n = malloc(sizeof(char) * (i + 1));
 if (n == NULL)
 {
 return (NULL);
 }
-for (size = 0; str[size] != '\0'; size++)
+for (size = 0; str[size]; size++)
 {
 n[size] = str[size];
 }
