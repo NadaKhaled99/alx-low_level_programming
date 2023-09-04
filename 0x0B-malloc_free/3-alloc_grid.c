@@ -24,7 +24,7 @@ for (hheight = 0; hheight < height; hheight++)
 TWD[hheight] = malloc(sizeof(int) * width);
 if (TWD[hheight] == NULL)
 {
-for (hheight = 0; hheight >= 0; hheight++)
+for (hheight = 0; hheight >= 0; hheight--)
 {
 free(TWD[hheight]);
 }
