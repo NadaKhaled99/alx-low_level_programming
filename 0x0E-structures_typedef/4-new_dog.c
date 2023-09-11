@@ -27,7 +27,7 @@ if (dog == NULL)
 {
 return (NULL);
 }
-dog->name = malloc(n * sizeof(dog->name));
+dog->name = malloc(n *sizeof(dog->name));
 if (dog == NULL)
 {
 return (NULL);
