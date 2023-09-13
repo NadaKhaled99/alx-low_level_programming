@@ -4,7 +4,7 @@
 *main - prints the opcodes of its own main function
 *@argc: number of arguments
 *@argv: array of arguments
-*Description:program prints opcodes 
+*Description:program prints opcodes
 *Return: Always 0 (success)
 */
 int main(int argc, char *argv[])
