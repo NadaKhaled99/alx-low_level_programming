@@ -1,7 +1,7 @@
 #include "function_pointers.h"
 /**
 *int_index-function that searches for an integer
-*@array:array of element 
+*@array:array of element
 *@size:is the number of elements in the array
 *@cmp:ptr to function
 *Return:returns the index of the first element
