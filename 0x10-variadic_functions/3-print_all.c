@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include "variadic_functions.h"
+#include <stdlib.h>
 /**
 *print_all-unction that prints anything
 *@format:is list of types of arguments passed to the func
@@ -18,13 +19,13 @@ while (format[j])
 {
 switch (format[j])
 {
-case 'a':
+case 'c':
 printf("%s%c", n, va_arg(l, int));
 break;
-case 'b':
+case 'i':
 printf("%s%d", n, va_arg(l, int));
 break;
-case 'c':
+case 'f':
 printf("%s%f", n, va_arg(l, double));
 break;
 case 's':
