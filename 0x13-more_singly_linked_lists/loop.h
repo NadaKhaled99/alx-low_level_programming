@@ -1,6 +1,8 @@
+#ifndef LOOP_H
+#define LOOP_H
 #include "lists.h"
 /**
-*looped_listint_len-Counts the number of unique nodes
+*loop_listint-counts the number of unique nodes
 *@head:1st node in linked list
 *Return:the number of nodes in the list
 */
@@ -20,7 +22,7 @@ while (here)
 if (t == here)
 {
 t = head;
-while (tortoise != hare)
+while (t != here)
 {
 nnodes++;
 t = t->next;
@@ -39,3 +41,4 @@ here = (here->next)->next;
 }
 return (0);
 }
+#endif
