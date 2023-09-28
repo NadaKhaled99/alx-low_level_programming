@@ -20,4 +20,5 @@ if (c & 1)
 sum++;
 }
 }
+return (sum);
 }
