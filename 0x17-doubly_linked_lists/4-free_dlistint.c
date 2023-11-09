@@ -15,7 +15,7 @@ while (nextnode)
 {
 free(real_node);
 real_node = nextnode;
-next_node = nextnode->next;
+nextnode = nextnode->next;
 }
 free(real_node);
 }
