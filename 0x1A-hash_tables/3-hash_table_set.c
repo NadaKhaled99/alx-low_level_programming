@@ -1,66 +1,64 @@
 #include "hash_tables.h"
+
 /**
- * Do_hash_node-make a new hash node
- * @key:key of the node
- * @value:of the node
- * Return: the new node, or NULL
+ * free_node - Free a node.
+ * @node: Node to free.
+ *
+ * Return: Void.
  */
-hash_node_t *Do_hash_node(const char *key, const char *value)
+void free_node(hash_node_t *node)
 {
-	hash_node_t *nnode;
-	nnode = malloc(sizeof(hash_node_t));
-	if (nnode == NULL)
-		return (NULL);
-	nnode->key = strdup(key);
-	if (nnode->key == NULL)
-	{
-		free(nnode);
-		return (NULL);
-	}
-	nnode->value = strdup(value);
-	if (nnode->value == NULL)
-	{
-		free(nnode->key);
-		free(nnode);
-		return (NULL);
-	}
-	nnode->next = NULL;
-	return (nnode);
+	free(node->key);
+	free(node->value);
+	free(node);
 }
+
 /**
- * hash_table_set-sets a key to a value in the hash table
- * @ht:hash table
- * @key: key of the data
- * @value: need to store
- * Return: 1 if successful,else return 0 
+ * hash_table_set - Set a value in the hash table
+ * @ht: Hash table
+ * @key: Key to be indexed
+ * @value: Value to set in the hash table
+ * Return: 1 if works, 0 if doesn't
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned long int inx;
-	hash_node_t *hash_node, *temp;
-	char *n_value;
-	if (ht == NULL || ht->array == NULL || ht->size == 0 ||
-	    key == NULL || strlen(key) == 0 || value == NULL)
-		return (0);
-	inx = key_inx((const unsigned char *)key, ht->size);
-	temp = ht->array[inx];
-	while (temp != NULL)
-	{
-		if (strcmp(temp->key, key) == 0)
-		{
-			n_value = strdup(value);
-			if (n_value == NULL)
-				return (0);
-			free(temp->value);
-			temp->value = n_value;
-			return (1);
-		}
-		temp = temp->next;
-	}
-	hash_node = Do_hash_node(key, value);
-	if (hash_node == NULL)
-		return (0);
-	hash_node->next = ht->array[inx];
-	ht->array[inx] = hash_node;
-	return (1);
+unsigned long int inx;
+hash_node_t *n_node, *current;
+if (strcmp(key, "") == 0 || key == NULL || ht == NULL)
+return (0);
+inx = key_index((const unsigned char *)key, ht->size);
+n_node = malloc(sizeof(hash_node_t));
+if (n_node == NULL)
+return (0);
+n_node->key = strdup((char *)key);
+n_node->value = strdup((char *)value);
+n_node->next = NULL;
+if (ht->array[inx] == NULL)
+ht->array[inx] = n_node;
+else
+{
+current = ht->array[inx];
+if (strcmp(current->key, key) == 0)
+{
+n_node->next = current->next;
+ht->array[inx] = n_node;
+free_node(current);
+return (1);
+}
+while (current->next != NULL && strcmp(current->next->key, key) != 0)
+{ current = current->next;
+}
+if (strcmp(current->key, key) == 0)
+{
+n_node->next = current->next->next;
+free_node(current->next);
+current->next = n_node;
+}
+else
+{
+n_node->next = ht->array[inx];
+ht->array[inx] = n_node;
+}
+}
+return (1);
 }
