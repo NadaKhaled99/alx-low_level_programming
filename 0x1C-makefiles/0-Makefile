@@ -1,0 +1,2 @@
+all: main.c NadaKhaled99.c
+	gcc main.c NadaKhaled99.c -o NadaKhaled99

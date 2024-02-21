@@ -1,0 +1,4 @@
+CC = gcc
+SRC = main.c NadaKhaled99.c
+all: $(SRC)
+	$(CC) $(SRC) -o NadaKhaled99
