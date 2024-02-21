@@ -1,0 +1,6 @@
+CC = gcc
+SRC = main.c NadKhaled99.c
+OBJ = $(SRC:.c=.o)
+NAME = NadaKhaled99
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
